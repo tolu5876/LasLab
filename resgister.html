@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sneaker Site Registration</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        /* Note: 'download.jpeg' must be in the same folder as this HTML file */
+        background-size: cover;
+        background-image: url(download.jpeg);
+        background-position: center;
+      }
+
+      .container {
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        width: 450px;
+      }
+
+      h2 {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        margin-bottom: 40px;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background: #ff4d4d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #e60000;
+      }
+
+      .error {
+        color: red;
+        font-size: 14px;
+        display: none;
+        margin-top: -30px;
+        margin-bottom: 20px;
+      }
+
+      /* Style for the checkmark inside the modal */
+      .modal-body .bi-check-circle-fill {
+        font-size: 3rem;
+        color: #28a745; /* Bootstrap Success Green */
+        margin-bottom: 15px;
+      }
+
+      /* Custom color for the modal button */
+      .btn-custom-red {
+        background-color: #ff4d4d;
+        border-color: #ff4d4d;
+        color: white;
+      }
+      .btn-custom-red:hover {
+        background-color: #e60000;
+        border-color: #e60000;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h2>Register to LaseLabs SNEAKER</h2>
+
+      <form id="registerForm">
+        <input type="text" id="fullname" placeholder="Full Name" />
+        <div class="error" id="fullname-error">Please enter your full name</div>
+
+        <input type="email" id="email" placeholder="Email" />
+        <div class="error" id="email-error">
+          Please enter a valid email address
+        </div>
+
+        <input type="password" id="password" placeholder="Password" />
+        <div class="error" id="password-error">Please enter your password</div>
+
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirm Password"
+        />
+        <div class="error" id="confirm-error">Please confirm your password</div>
+
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+
+    <div
+      class="modal fade"
+      id="successModal"
+      tabindex="-1"
+      aria-labelledby="successModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">
+              Registration Complete!
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-check-circle-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.058z"
+              />
+            </svg>
+            <p>Your LaseLabs SNEAKER account has been successfully created.</p>
+            <p>Click below to log in!</p>
+          </div>
+          <div class="modal-footer justify-content-center">
+            <button
+              type="button"
+              class="btn btn-custom-red"
+              data-bs-dismiss="modal"
+              onclick="toLoginPage()"
+            >
+              Proceed to Login
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Get the modal element
+      const successModal = new bootstrap.Modal(
+        document.getElementById("successModal")
+      );
+
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          // Get values
+          const fullname = document.getElementById("fullname").value.trim();
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          let isValid = true;
+
+          // 1. Full Name Validation
+          const fullnameerror = document.getElementById("fullname-error");
+          if (fullname === "") {
+            fullnameerror.style.display = "block";
+            isValid = false;
+          } else {
+            fullnameerror.style.display = "none";
+          }
+
+          // 2. Email Validation
+          const emailerror = document.getElementById("email-error");
+          if (email === "") {
+            emailerror.innerText = "Please enter your email";
+            emailerror.style.display = "block";
+            isValid = false;
+          } else if (!email.includes("@")) {
+            emailerror.innerText = "Please enter a valid email address";
+            emailerror.style.display = "block";
+            isValid = false;
+          } else {
+            emailerror.style.display = "none";
+          }
+
+          // 3. Password Validation
+          const passworderror = document.getElementById("password-error");
+          if (password === "") {
+            passworderror.style.display = "block";
+            isValid = false;
+          } else if (password.length < 8) {
+            passworderror.textContent =
+              "Password must be at least 8 characters.";
+            passworderror.style.display = "block";
+            isValid = false;
+          } else {
+            passworderror.style.display = "none";
+          }
+
+          // 4. Confirm Password Validation & Match Check
+          const confirmerror = document.getElementById("confirm-error");
+          if (confirmPassword === "") {
+            confirmerror.innerText = "Please confirm your password";
+            confirmerror.style.display = "block";
+            isValid = false;
+          } else if (password !== confirmPassword) {
+            confirmerror.innerText = "Passwords do not match";
+            confirmerror.style.display = "block";
+            isValid = false;
+          } else {
+            confirmerror.style.display = "none";
+          }
+
+          // 5. SUCCESS LOGIC: Show Modal on Valid Form
+          if (isValid) {
+            // In a real app, you'd send data to the server here.
+
+            // 1. Show the success modal
+            successModal.show();
+
+            // 2. Reset the form fields
+            document.getElementById("registerForm").reset();
+          }
+
+          localStorage.setItem("registeredEmail", email);
+          localStorage.setItem("registeredPassword", password);
+        });
+
+      function toLoginPage() {
+        window.location.href = "login.html";
+      }
+    </script>
+  </body>
+</html>

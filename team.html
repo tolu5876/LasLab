@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Shop - Sailor</title>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+      .product-card {
+        background: #fff;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        margin-bottom: 30px;
+        transition: transform 0.2s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .product-card img {
+        width: 100%;
+        display: block;
+      }
+
+      .product-card-body {
+        padding: 15px;
+      }
+
+      .product-title {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+
+      .product-price {
+        font-size: 16px;
+        color: #ff3b3b;
+        margin-bottom: 10px;
+      }
+
+      .btn-buy {
+        width: 100%;
+        background: #111;
+        color: #fff;
+        border-radius: 8px;
+        font-weight: bold;
+        transition: background 0.2s ease;
+      }
+
+      .btn-buy:hover {
+        background: #ff3b3b;
+      }
+    </style>
+  </head>
+
+  <body class="shop-page">
+    <!-- Header -->
+    <header id="header" class="header d-flex align-items-center sticky-top">
+      <div
+        class="container-fluid container-xl position-relative d-flex align-items-center"
+      >
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <h1 class="sitename">Sailor</h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="btn-getstarted" href="about.html">Get Started</a>
+      </div>
+    </header>
+    <!-- End Header -->
+
+    <main id="main">
+      <!-- Page Title -->
+      <div class="page-title light-background">
+        <div
+          class="container d-lg-flex justify-content-between align-items-center"
+        >
+          <h1 class="mb-2 mb-lg-0">Shop</h1>
+          <nav class="breadcrumbs">
+            <ol>
+              <li><a href="index.html">Home</a></li>
+              <li class="current">Shop</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+      <!-- End Page Title -->
+
+      <!-- Products Section -->
+      <section id="products" class="section">
+        <div class="container">
+          <div class="row">
+            <!-- Product 1 -->
+            <div
+              class="col-lg-3 col-md-4 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="product-card">
+                <img src="assets/img/products/product-1.jpg" alt="Product 1" />
+                <div class="product-card-body">
+                  <h4 class="product-title">Men's Runner X</h4>
+                  <p class="product-price">₦18,000</p>
+                  <a href="checkout.html" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div
+              class="col-lg-3 col-md-4 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="product-card">
+                <img src="assets/img/products/product-2.jpg" alt="Product 2" />
+                <div class="product-card-body">
+                  <h4 class="product-title">Women's Sport Pro</h4>
+                  <p class="product-price">₦22,000</p>
+                  <a href="checkout.html" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div
+              class="col-lg-3 col-md-4 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="product-card">
+                <img src="assets/img/products/product-3.jpg" alt="Product 3" />
+                <div class="product-card-body">
+                  <h4 class="product-title">Kids Runner Mini</h4>
+                  <p class="product-price">₦12,000</p>
+                  <a href="checkout.html" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div
+              class="col-lg-3 col-md-4 col-sm-6"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="product-card">
+                <img src="assets/img/products/product-4.jpg" alt="Product 4" />
+                <div class="product-card-body">
+                  <h4 class="product-title">Fitness Pro Sneakers</h4>
+                  <p class="product-price">₦25,000</p>
+                  <a href="checkout.html" class="btn btn-buy">Buy Now</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add more products here as needed -->
+          </div>
+        </div>
+      </section>
+      <!-- End Products Section -->
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer" class="footer dark-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Sailor</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>A108 Adam Street</p>
+              <p>New York, NY 535022</p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>+1 5589 55488 55</span>
+              </p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Terms of service</a></li>
+              <li><a href="#">Privacy policy</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Web Design</a></li>
+              <li><a href="#">Web Development</a></li>
+              <li><a href="#">Product Management</a></li>
+              <li><a href="#">Marketing</a></li>
+              <li><a href="#">Graphic Design</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>
+              Subscribe to our newsletter and receive the latest news about our
+              products and services!
+            </p>
+            <form
+              action="forms/newsletter.php"
+              method="post"
+              class="php-email-form"
+            >
+              <div class="newsletter-form">
+                <input type="email" name="email" /><input
+                  type="submit"
+                  value="Subscribe"
+                />
+              </div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your subscription request has been sent. Thank you!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">Sailor</strong>
+          <span>All Rights Reserved</span>
+        </p>
+        <div class="credits">
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      AOS.init({
+        duration: 800,
+        easing: "ease-out-quart",
+        once: true,
+      });
+    </script>
+  </body>
+</html>
