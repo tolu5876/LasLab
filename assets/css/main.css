@@ -2493,3 +2493,38 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 60%);
   font-size: 14px;
 }
+
+/* .product-card img {
+  height: 260px;
+  width: 100%;
+  object-fit: cover;
+} */
+
+/* .product-card .product-info {
+  padding: 15px 0;
+}
+.product-card .product-info h4 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.product-card .product-info h4 a {
+  color: var(--default-color);
+  transition: 0.3s;
+}
+.product-card .product-info h4 a:hover {
+  color: var(--accent-color);
+} 
+.product-card .product-info .price {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent-color);
+} */
+
+#productList .product-card {
+  background-color: var(--surface-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  padding: 100px;
+  height: 100%;
+  transition: 0.3s;
+}

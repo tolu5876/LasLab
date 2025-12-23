@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Shop — LaseLabs</title>
+    <meta
+      name="description"
+      content="Shop handpicked sneakers from LaseLabs — new releases, best sellers and exclusive drops."
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="collectoion.css" />
     <!-- Favicons -->
@@ -50,7 +54,7 @@
 
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="#hero">Home</a></li>
+            <li><a href="dashbord.html">Home</a></li>
             <li class="dropdown">
               <a href="aboutsection.html"><span>About</span></a>
             </li>
@@ -61,106 +65,377 @@
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
 
-        <a class="btn-getstarted" href="about.html">Shop Now</a>
+        <a class="btn-getstarted" href="collectoion.html">Shop Now</a>
       </div>
     </header>
 
     <!-- Collections Section -->
     <section id="collections" class="collections section">
-      <div class="container">
+      <div class="container-xl">
         <div class="section-title" data-aos="fade-up">
-          <h2>Our Collections</h2>
+          <h2>Shop Now</h2>
           <p>Handpicked sneakers for every style and purpose</p>
         </div>
+        <div class="row mb-4 align-items-center">
+          <div class="col-md-4 mb-2">
+            <form class="d-flex" role="search">
+              <input
+                id="searchInput"
+                class="form-control"
+                type="search"
+                placeholder="Search sneakers, e.g. 'Runner'"
+                aria-label="Search"
+              />
+              <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+          </div>
+          <div class="col-md-4 text-md-center mb-2">
+            <div class="btn-group" role="group" aria-label="Filter">
+              <button
+                class="btn btn-outline-secondary filter-btn active"
+                data-filter="all"
+              >
+                All
+              </button>
+              <button
+                class="btn btn-outline-secondary filter-btn"
+                data-filter="men"
+              >
+                Men
+              </button>
+              <button
+                class="btn btn-outline-secondary filter-btn"
+                data-filter="women"
+              >
+                Women
+              </button>
+              <button
+                class="btn btn-outline-secondary filter-btn"
+                data-filter="kids"
+              >
+                Kids
+              </button>
+            </div>
+          </div>
+          <div class="col-md-4 text-md-end mb-2">
+            <select class="form-select w-auto d-inline-block">
+              <option selected>Sort by: Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest</option>
+            </select>
+          </div>
+        </div>
 
-        <div class="collections-grid">
-          <!-- Item 1 -->
-          <article
-            class="collection-item"
+        <div class="row g-4">
+          <!-- Product Card 1 -->
+          <div
+            class="col-sm-6 col-md-4 col-lg-3 product-card-wrapper"
+            data-category="men"
+            data-name="men's runner x"
             data-aos="fade-up"
             data-aos-delay="0"
           >
-            <div class="thumb">
-              <img src="th.webp" alt="Men's Runner X - White" />
+            <div class="card product-card h-70">
+              <img
+                src="th.webp"
+                class="card-img-top"
+                alt="Men's Runner X - White"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Men's Runner X</h5>
+                <p class="mb-2 text-muted">Lightweight running sneaker</p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <strong class="price">₦18,000</strong>
+                  <a href="checkout.html" class="btn btn-primary btn-sm">Buy</a>
+                </div>
+              </div>
             </div>
-            <div class="info">
-              <h3>Men's Runner X</h3>
-              <p class="price">₦18,000</p>
-              <a href="checkout.html" class="btn">Buy Now</a>
-            </div>
-          </article>
+          </div>
 
-          <!-- Item 2 -->
-          <article
-            class="collection-item"
+          <div
+            class="col-sm-6 col-md-4 col-lg-3 product-card-wrapper"
+            data-category="women"
+            data-name="women's swift air"
             data-aos="fade-up"
             data-aos-delay="100"
           >
-            <div class="thumb">
+            <div class="card product-card h-70">
               <img
                 src="Bienvenue sur SHEIN.jpeg"
+                class="card-img-top"
                 alt="Women's Swift Air - Black"
               />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Women's Swift Air</h5>
+                <p class="mb-2 text-muted">Cushioned everyday comfort</p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <strong class="price">₦16,500</strong>
+                  <a href="checkout.html" class="btn btn-primary btn-sm">Buy</a>
+                </div>
+              </div>
             </div>
-            <div class="info">
-              <h3>Women's Swift Air</h3>
-              <p class="price">₦16,500</p>
-              <a href="checkout.html" class="btn">Buy Now</a>
-            </div>
-          </article>
+          </div>
 
-          <!-- Item 3 -->
-          <article
-            class="collection-item"
+          <div
+            class="col-sm-6 col-md-4 col-lg-3 product-card-wrapper"
+            data-category="kids"
+            data-name="kids flex+"
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="thumb">
-              <img src="download.jpeg" alt="Kids Flex+ - Blue" />
+            <div class="card product-card h-70">
+              <img
+                src="download.jpeg"
+                class="card-img-top"
+                alt="Kids Flex+ - Blue"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Kids Flex+</h5>
+                <p class="mb-2 text-muted">Durable playtime sneaker</p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <strong class="price">₦9,500</strong>
+                  <a href="checkout.html" class="btn btn-primary btn-sm">Buy</a>
+                </div>
+              </div>
             </div>
-            <div class="info">
-              <h3>Kids Flex+</h3>
-              <p class="price">₦9,500</p>
-              <a href="checkout.html" class="btn">Buy Now</a>
-            </div>
-          </article>
+          </div>
 
-          <!-- Item 4 -->
-          <article
-            class="collection-item"
+          <div
+            class="col-sm-6 col-md-4 col-lg-3 product-card-wrapper"
+            data-category="unisex"
+            data-name="trending canvas"
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            <div class="thumb">
-              <img src="download (3).webp" alt="Trending Canvas - Grey" />
+            <div class="card product-card h-70">
+              <img
+                src="download (3).webp"
+                class="card-img-top"
+                alt="Trending Canvas - Grey"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Trending Canvas</h5>
+                <p class="mb-2 text-muted">Casual everyday style</p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <strong class="price">₦14,000</strong>
+                  <a href="checkout.html" class="btn btn-primary btn-sm">Buy</a>
+                </div>
+              </div>
             </div>
-            <div class="info">
-              <h3>Trending Canvas</h3>
-              <p class="price">₦14,000</p>
-              <a href="checkout.html" class="btn">Buy Now</a>
+          </div>
+
+          <div
+            class="col-sm-6 col-md-4 col-lg-3 product-card-wrapper"
+            data-category="men"
+            data-name="performance pro"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <div class="card product-card h-70">
+              <img
+                src="download (4).jpeg"
+                class="card-img-top"
+                alt="Performance Pro - Red"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Performance Pro</h5>
+                <p class="mb-2 text-muted">High-performance trainer</p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <strong class="price">₦20,000</strong>
+                  <a href="checkout.html" class="btn btn-primary btn-sm">Buy</a>
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
 
-          <!-- Item 5 -->
+          <!-- Additional products -->
+          <div
+            class="col-sm-6 col-md-4 col-lg-3 product-card-wrapper"
+            data-category="women"
+            data-name="luxe runner"
+            data-aos="fade-up"
+            data-aos-delay="450"
+          >
+            <div class="card product-card h-70">
+              <img
+                src="download (5).jpeg"
+                class="card-img-top"
+                alt="Luxe Runner - Pink"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Luxe Runner</h5>
+                <p class="mb-2 text-muted">Premium casual runner</p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <strong class="price">₦22,000</strong>
+                  <a href="checkout.html" class="btn btn-primary btn-sm">Buy</a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <!-- Item 6 -->
-          <article
-            class="collection-item"
+          <div
+            class="col-sm-6 col-md-4 col-lg-3 product-card-wrapper"
+            data-category="men"
+            data-name="street pro"
             data-aos="fade-up"
             data-aos-delay="500"
           >
-            <div class="thumb">
-              <img src="download (4).jpeg" alt="Performance Pro - Red" />
+            <div class="card product-card h-70">
+              <img src="1.jpg" class="card-img-top" alt="Street Pro - Black" />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Street Pro</h5>
+                <p class="mb-2 text-muted">Urban everyday sneaker</p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <strong class="price">₦19,500</strong>
+                  <a href="checkout.html" class="btn btn-primary btn-sm">Buy</a>
+                </div>
+              </div>
             </div>
-            <div class="info">
-              <h3>Performance Pro</h3>
-              <p class="price">₦20,000</p>
-              <a href="checkout.html" class="btn">Buy Now</a>
+          </div>
+
+          <div
+            class="col-sm-6 col-md-4 col-lg-3 product-card-wrapper"
+            data-category="kids"
+            data-name="mini runner"
+            data-aos="fade-up"
+            data-aos-delay="550"
+          >
+            <div class="card product-card h-70">
+              <img
+                src="download (2).jpeg"
+                class="card-img-top"
+                alt="Mini Runner - Blue"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title">Mini Runner</h5>
+                <p class="mb-2 text-muted">Kids lightweight trainer</p>
+                <div
+                  class="mt-auto d-flex justify-content-between align-items-center"
+                >
+                  <strong class="price">₦8,500</strong>
+                  <a href="checkout.html" class="btn btn-primary btn-sm">Buy</a>
+                </div>
+              </div>
             </div>
-          </article>
+          </div>
+
+          <!-- <div class="col-12 text-center d-none" id="noResults">
+            <p class="text-muted">No products match your search.</p>
+          </div> -->
         </div>
       </div>
     </section>
+
+    <div class="row" id="productList"></div>
+
+    <footer id="footer" class="footer dark-background">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">LaseLabs</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Ilepupa Bode olude</p>
+              <p>
+                Nigeria ogunstate <br />
+                Abeokuta
+              </p>
+              <p class="mt-3">
+                <strong>Phone:</strong> <span>07072161185</span>
+              </p>
+              <p>
+                <strong>Email:</strong>
+                <span>akanbigiwatoluwalase445@gmail</span>
+              </p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><a href="#">Sneaker Sales</a></li>
+              <li><a href="#">New Releases</a></li>
+              <li><a href="#">Size Guide</a></li>
+              <li><a href="#">Customer Support</a></li>
+              <li><a href="#">Order Tracking</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>
+              Subscribe to our newsletter and receive the latest news about our
+              products and services!
+            </p>
+            <form
+              action="forms/newsletter.php"
+              method="post"
+              class="php-email-form"
+            >
+              <div class="newsletter-form">
+                <input type="email" name="email" /><input
+                  type="submit"
+                  value="Subscribe"
+                />
+              </div>
+              <div class="loading">Loading</div>
+              <div class="error-message"></div>
+              <div class="sent-message">
+                Your subscription request has been sent. Thank you!
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1 sitename">LaseLabs</strong>
+          <span>All Rights Reserved</span>
+        </p>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Preloader -->
+    <!-- <div id="preloader"></div> -->
 
     <!-- AOS JS (add just before </body>) -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -185,5 +460,38 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const buttons = document.querySelectorAll(".filter-btn");
+        const items = document.querySelectorAll(".product-card-wrapper");
+
+        function showFilter(filter) {
+          items.forEach((item) => {
+            const cat = item.getAttribute("data-category");
+            if (filter === "all" || cat === filter) {
+              item.style.display = "";
+            } else {
+              item.style.display = "none";
+            }
+          });
+        }
+
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            buttons.forEach((b) => b.classList.remove("active"));
+            this.classList.add("active");
+            const filter = this.getAttribute("data-filter");
+            showFilter(filter);
+            // update AOS after filtering so animations re-run
+            setTimeout(function () {
+              AOS.refresh();
+            }, 150);
+          });
+        });
+
+        // default
+        showFilter("all");
+      });
+    </script>
   </body>
 </html>

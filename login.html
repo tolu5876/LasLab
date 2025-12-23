@@ -40,8 +40,8 @@
       input {
         width: 100%;
         padding: 12px;
+        border: 2px rgb(175, 169, 169) solid;
         border-radius: 5px;
-        border: none;
         margin-bottom: 35px;
       }
 
@@ -142,8 +142,12 @@
           </div>
 
           <div class="modal-footer justify-content-center">
-            <button class="btn btn-custom-red" data-bs-dismiss="modal">
-              <a href="index.html">Proceed to Login</a>
+            <button
+              class="btn btn-custom-red"
+              data-bs-dismiss="modal"
+              onclick="todashbordPage()"
+            >
+              Proceed to dashbord
             </button>
           </div>
         </div>
@@ -212,6 +216,10 @@
           loginModal.show();
           document.getElementById("loginForm").reset();
         });
+
+      function todashbordPage() {
+        window.location.href = "dashbord.html";
+      }
     </script>
   </body>
 </html>
